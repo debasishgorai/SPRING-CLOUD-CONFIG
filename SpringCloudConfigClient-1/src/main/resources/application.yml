@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: message
+
+
+  config:
+   import: optional:configserver:http://localhost:9093
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
+  endpoint:
+    health:
+      show-details: always
+server:
+    port : 8081
